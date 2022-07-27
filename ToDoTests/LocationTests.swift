@@ -36,4 +36,18 @@ class LocationTests: XCTestCase {
         let secondLocation = Location(name: "Second", coordinate: coordinate)
         XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if they have different names.")
     }
+
+    func test_location_isEquatable_firstCoordinateNil() {
+        let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First")
+        let secondLocation = Location(name: "First", coordinate: coordinate)
+        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if the first has a coordinate that is nil and the second has a coordinate that is not nil.")
+    }
+
+    func test_location_isEquatable_secondCoordinateNil() {
+        let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First", coordinate: coordinate)
+        let secondLocation = Location(name: "First")
+        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if the first has a coordinate that is not nil and the second has a coordinate that is nil.")
+    }
 }
