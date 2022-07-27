@@ -82,4 +82,20 @@ class LocationTests: XCTestCase {
         let secondLocation = Location(name: "First", coordinate: secondCoordinate)
         XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal when the tolerance of 0.000_000_1 for latitude is exceeded.")
     }
+
+    func test_location_isEquatable_coordinatesLongitudeSmallDifference() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2.000_000_01)
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First", coordinate: firstCoordinate)
+        let secondLocation = Location(name: "First", coordinate: secondCoordinate)
+        XCTAssertEqual(firstLocation, secondLocation, "Two locations shall be equal within a tolerance of 0.000_000_1 for longitude.")
+    }
+
+    func test_location_isEquatable_coordinatesLongitudeLargeDifference() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2.000_000_2)
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First", coordinate: firstCoordinate)
+        let secondLocation = Location(name: "First", coordinate: secondCoordinate)
+        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal when the tolerance of 0.000_000_1 for longitude is exceeded.")
+    }
 }

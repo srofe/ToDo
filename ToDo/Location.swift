@@ -19,12 +19,13 @@ struct Location: Equatable {
 
     static func == (lhs: Location, rhs: Location) -> Bool {
         guard lhs.name == rhs.name else { return false }
-        guard lhs.coordinate?.longitude == rhs.coordinate?.longitude else { return false }
         if lhs.coordinate == nil && rhs.coordinate != nil { return false }
         if lhs.coordinate != nil && rhs.coordinate == nil { return false }
         if let lhsCoordinate = lhs.coordinate, let rhsCoordinate = rhs.coordinate {
-            print("Difference: \(abs(lhsCoordinate.latitude - rhsCoordinate.latitude))")
             if abs(lhsCoordinate.latitude - rhsCoordinate.latitude) > 0.000_000_1 {
+                return false
+            }
+            if abs(lhsCoordinate.longitude - rhsCoordinate.longitude) > 0.000_000_1 {
                 return false
             }
         }
