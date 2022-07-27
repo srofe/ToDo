@@ -22,7 +22,7 @@ class ToDoItemTests: XCTestCase {
     func test_init_setsTimeStamp() throws {
         let dummyTimeStamp: TimeInterval = 42.0
         let item = ToDoItem(title: "Dummy", timestamp: dummyTimeStamp)
-        let timestamp = try XCTUnwrap(item.timestamp)
+        let timestamp = try XCTUnwrap(item.timestamp, "The ToDo timestamp parameter shall not be nil if a valid value is passed by the initialiser.")
         XCTAssertEqual(timestamp, dummyTimeStamp, accuracy: 0.000_001, "The ToDo shall initialise the timestamp parameter if it is passed by the initialiser.")
     }
 }
