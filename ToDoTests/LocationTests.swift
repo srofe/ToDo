@@ -98,4 +98,10 @@ class LocationTests: XCTestCase {
         let secondLocation = Location(name: "First", coordinate: secondCoordinate)
         XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal when the tolerance of 0.000_000_1 for longitude is exceeded.")
     }
+
+    func test_location_isEquatable_coordinatesAreNull() {
+        let firstLocation = Location(name: "First")
+        let secondLocation = Location(name: "First")
+        XCTAssertEqual(firstLocation, secondLocation, "Two locations shall be equal if both have nil coordinates.")
+    }
 }
