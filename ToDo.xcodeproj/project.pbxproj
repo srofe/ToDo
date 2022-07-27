@@ -13,7 +13,7 @@
 		F49D240C2890D572008EEBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49D240A2890D572008EEBB2 /* Main.storyboard */; };
 		F49D240E2890D575008EEBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49D240D2890D575008EEBB2 /* Assets.xcassets */; };
 		F49D24112890D575008EEBB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */; };
-		F49D241C2890D576008EEBB2 /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D241B2890D576008EEBB2 /* ToDoTests.swift */; };
+		F49D241C2890D576008EEBB2 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D241B2890D576008EEBB2 /* ToDoItemTests.swift */; };
 		F49D24262890D576008EEBB2 /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24252890D576008EEBB2 /* ToDoUITests.swift */; };
 		F49D24282890D576008EEBB2 /* ToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24272890D576008EEBB2 /* ToDoUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		F49D24102890D575008EEBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F49D24122890D575008EEBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F49D24172890D576008EEBB2 /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F49D241B2890D576008EEBB2 /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
+		F49D241B2890D576008EEBB2 /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
 		F49D24212890D576008EEBB2 /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49D24252890D576008EEBB2 /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
 		F49D24272890D576008EEBB2 /* ToDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		F49D241A2890D576008EEBB2 /* ToDoTests */ = {
 			isa = PBXGroup;
 			children = (
-				F49D241B2890D576008EEBB2 /* ToDoTests.swift */,
+				F49D241B2890D576008EEBB2 /* ToDoItemTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49D241C2890D576008EEBB2 /* ToDoTests.swift in Sources */,
+				F49D241C2890D576008EEBB2 /* ToDoItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
