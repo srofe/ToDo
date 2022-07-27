@@ -22,4 +22,11 @@ class LocationTests: XCTestCase {
         let location = Location(name: "Dummy")
         XCTAssertEqual(location.name, "Dummy", "The Location shall initialise the name parameter to the value passed by the initialiser.")
     }
+
+    func test_location_isEquatable() {
+        let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First", coordinate: coordinate)
+        let secondLocation = Location(name: "First", coordinate: coordinate)
+        XCTAssertEqual(firstLocation, secondLocation, "A Location shall conform to the Equatable protocol.")
+    }
 }
