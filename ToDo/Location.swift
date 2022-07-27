@@ -23,6 +23,14 @@ struct Location: Equatable {
         guard lhs.coordinate?.longitude == rhs.coordinate?.longitude else { return false }
         if lhs.coordinate == nil && rhs.coordinate != nil { return false }
         if lhs.coordinate != nil && rhs.coordinate == nil { return false }
+        print("Here - 1")
+        if let lhsCoordinate = lhs.coordinate, let rhsCoordinate = rhs.coordinate {
+            print("Here - 2")
+            print("Difference: \(abs(lhsCoordinate.latitude - rhsCoordinate.latitude))")
+            if abs(lhsCoordinate.latitude - rhsCoordinate.latitude) > 0.000_000_1 {
+                return false
+            }
+        }
         return true
     }
 }

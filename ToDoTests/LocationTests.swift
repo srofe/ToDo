@@ -56,7 +56,7 @@ class LocationTests: XCTestCase {
         let secondCoordinate = CLLocationCoordinate2D(latitude: 2, longitude: 2)
         let firstLocation = Location(name: "First", coordinate: firstCoordinate)
         let secondLocation = Location(name: "First", coordinate: secondCoordinate)
-        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if they have different coordinates.")
+        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if they have different latitude coordinate components.")
     }
 
     func test_location_isEquatable_coordinatesLongitudeDifferent() {
@@ -64,6 +64,14 @@ class LocationTests: XCTestCase {
         let secondCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 1)
         let firstLocation = Location(name: "First", coordinate: firstCoordinate)
         let secondLocation = Location(name: "First", coordinate: secondCoordinate)
-        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if they have different coordinates.")
+        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if they have different longitude coordinate components.")
+    }
+
+    func test_location_isEquatable_coordinatesLatitudeSmallDifference() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 1.000_000_01, longitude: 2)
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First", coordinate: firstCoordinate)
+        let secondLocation = Location(name: "First", coordinate: secondCoordinate)
+        XCTAssertEqual(firstLocation, secondLocation, "Two locations shall be equal within a tolerance of 0.000_000_1 for latitude.")
     }
 }
