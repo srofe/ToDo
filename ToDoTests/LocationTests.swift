@@ -23,10 +23,17 @@ class LocationTests: XCTestCase {
         XCTAssertEqual(location.name, "Dummy", "The Location shall initialise the name parameter to the value passed by the initialiser.")
     }
 
-    func test_location_isEquatable() {
+    func test_location_isEquatable_equalLocations() {
         let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
         let firstLocation = Location(name: "First", coordinate: coordinate)
         let secondLocation = Location(name: "First", coordinate: coordinate)
-        XCTAssertEqual(firstLocation, secondLocation, "A Location shall conform to the Equatable protocol.")
+        XCTAssertEqual(firstLocation, secondLocation, "Two Location's shall be equal if they have the same parameters.")
+    }
+
+    func test_location_isEquatable_differentNames() {
+        let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let firstLocation = Location(name: "First", coordinate: coordinate)
+        let secondLocation = Location(name: "Second", coordinate: coordinate)
+        XCTAssertNotEqual(firstLocation, secondLocation, "Two locations shall not be equal if they have different names.")
     }
 }

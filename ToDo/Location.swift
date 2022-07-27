@@ -18,6 +18,7 @@ struct Location: Equatable {
     }
 
     static func == (lhs: Location, rhs: Location) -> Bool {
+        guard lhs.name == rhs.name else { return false }
         return true
     }
 }
