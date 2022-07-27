@@ -31,4 +31,10 @@ class ToDoItemTests: XCTestCase {
         let item = ToDoItem(title: "Dummy Title", location: dummyLocation)
         XCTAssertEqual(item.location?.name, dummyLocation.name, "The ToDo shall initialise the location parameter if it is passed by the initialiser.")
     }
+
+    func test_todoitem_isEquatable_sameNames() {
+        let firstItem = ToDoItem(title: "Dummy")
+        let secondItem = ToDoItem(title: "Dummy")
+        XCTAssertEqual(firstItem, secondItem, "Two ToDo items shall be equal if they have the same title.")
+    }
 }
