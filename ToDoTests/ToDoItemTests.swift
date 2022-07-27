@@ -12,4 +12,8 @@ class ToDoItemTests: XCTestCase {
     func test_init_takesTitle() {
         _ = ToDoItem(title: "Dummy")
     }
+
+    func test_init_takesTitleAndDescription() {
+        _ = ToDoItem(title: "Dummy", itemDescription: "Dummy Description")
+    }
 }
