@@ -25,4 +25,10 @@ class ToDoItemTests: XCTestCase {
         let timestamp = try XCTUnwrap(item.timestamp, "The ToDo timestamp parameter shall not be nil if a valid value is passed by the initialiser.")
         XCTAssertEqual(timestamp, dummyTimeStamp, accuracy: 0.000_001, "The ToDo shall initialise the timestamp parameter if it is passed by the initialiser.")
     }
+
+    func test_init_whenGivenLocation_SetsLocation() {
+        let dummyLocation = Location(name: "Dummy Name")
+        let item = ToDoItem(title: "Dummy Title", location: dummyLocation)
+        XCTAssertEqual(item.location?.name, dummyLocation.name, "The ToDo shall initialise the location parameter if it is passed by the initialiser.")
+    }
 }
