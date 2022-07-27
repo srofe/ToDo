@@ -9,11 +9,13 @@ import XCTest
 @testable import ToDo
 
 class ToDoItemTests: XCTestCase {
-    func test_init_takesTitle() {
-        _ = ToDoItem(title: "Dummy")
+    func test_init_whenGivenTitle_setsTitle() {
+        let item = ToDoItem(title: "Dummy")
+        XCTAssertEqual(item.title, "Dummy", "The ToDo shall initialise the title parameter to the value passed by the initialiser.")
     }
 
-    func test_init_takesTitleAndDescription() {
-        _ = ToDoItem(title: "Dummy", itemDescription: "Dummy Description")
+    func test_init_whenGivenDescription_setsDescription() {
+        let item = ToDoItem(title: "Dummy", itemDescription: "Dummy Description")
+        XCTAssertEqual(item.itemDescription, "Dummy Description", "The ToDo shall initialise the item description if it is passed by the initialiser.")
     }
 }
