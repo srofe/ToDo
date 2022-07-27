@@ -18,4 +18,10 @@ class ToDoItemTests: XCTestCase {
         let item = ToDoItem(title: "Dummy", itemDescription: "Dummy Description")
         XCTAssertEqual(item.itemDescription, "Dummy Description", "The ToDo shall initialise the item description if it is passed by the initialiser.")
     }
+
+    func test_init_setsTimeStamp() {
+        let dummyTimeStamp: TimeInterval = 42.0
+        let item = ToDoItem(title: "Dummy", timestamp: dummyTimeStamp)
+        XCTAssertEqual(item.timestamp, dummyTimeStamp, "The ToDo shall initialise the timestamp parameter if it is passed by the initialiser.")
+    }
 }
