@@ -17,4 +17,9 @@ class LocationTests: XCTestCase {
         XCTAssertEqual(resultCoordinate.latitude, 1, accuracy: 0.000_001, "The Location shall initialise the coordinate parameter if passed by the initialiser - latitude.")
         XCTAssertEqual(resultCoordinate.longitude, 2, accuracy: 0.000_001, "The Location shall initialise the coordinate parameter if passed by the initialiser - longitude.")
     }
+
+    func test_init_setsName() {
+        let location = Location(name: "Dummy")
+        XCTAssertEqual(location.name, "Dummy", "The Location shall initialise the name parameter to the value passed by the initialiser.")
+    }
 }
