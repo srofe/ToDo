@@ -114,11 +114,11 @@
 				F49D24082890D572008EEBB2 /* ViewController.swift */,
 				F49D24342890DA18008EEBB2 /* ToDoItem.swift */,
 				F49D2436289104E3008EEBB2 /* Location.swift */,
+				F4AF1980289219D50024C3D1 /* ToDoItemStore.swift */,
 				F49D240A2890D572008EEBB2 /* Main.storyboard */,
 				F49D240D2890D575008EEBB2 /* Assets.xcassets */,
 				F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */,
 				F49D24122890D575008EEBB2 /* Info.plist */,
-				F4AF1980289219D50024C3D1 /* ToDoItemStore.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";

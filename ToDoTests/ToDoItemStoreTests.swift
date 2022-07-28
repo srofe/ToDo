@@ -7,22 +7,34 @@
 
 import XCTest
 @testable import ToDo
+import Combine
 
 class ToDoItemStoreTests: XCTestCase {
-    func test_add_shouldPublishChange() {
+    func test_add_shouldPublishChange() throws {
         let sut = ToDoItemStore()
-        let publisherExpectation = expectation(description: "Wait for publisher in \(#file).")
-        var receivedItems: [ToDoItem] = []
-        let token = sut.itemPublisher
+        let toDoItem = ToDoItem(title: "Dummy")
+        let receivedItems = try wait(for: sut.itemPublisher) {
+            sut.add(toDoItem)
+        }
+        XCTAssertEqual(receivedItems, [toDoItem], "The ToDoItemStore shall publish items when when an item has been added to it.")
+    }
+}
+
+extension XCTestCase {
+    func wait<T: Publisher>(for publisher: T, after change: () -> Void) throws -> T.Output where T.Failure == Never {
+        let publisherExpectation = expectation(description: "Wait for publisher in file \(#file).")
+        var result: T.Output?
+        let token = publisher
             .dropFirst()
-            .sink { items in
-                receivedItems = items
+            .sink { value in
+                result = value
                 publisherExpectation.fulfill()
             }
-        let toDoItem = ToDoItem(title: "Dummy")
-        sut.add(toDoItem)
+        change()
         wait(for: [publisherExpectation], timeout: 1)
         token.cancel()
-        XCTAssertEqual(receivedItems, [toDoItem], "The ToDoItemStore shall publish items when when an item has been added to it.")
+        let unwrappedResult = try XCTUnwrap(result, "Publisher did not publish any value.")
+
+        return unwrappedResult
     }
 }
