@@ -24,4 +24,8 @@ class ToDoItemsListViewControllerTests: XCTestCase {
     func test_shouldBeSetup() {
         XCTAssertNotNil(sut, "The ToDoItemsListViewController shall be available from the storyboard.")
     }
+
+    func test_shouldHaveTableView() {
+        XCTAssertTrue(sut.tableView.isDescendant(of: sut.view), "The ToDoItemsListViewController shall have a table view.")
+    }
 }
