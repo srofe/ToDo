@@ -21,7 +21,12 @@ class ToDoItemStoreTests: XCTestCase {
 }
 
 extension XCTestCase {
-    func wait<T: Publisher>(for publisher: T, after change: () -> Void) throws -> T.Output where T.Failure == Never {
+    func wait<T: Publisher>(
+        for publisher: T,
+        after change: () -> Void,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) throws -> T.Output where T.Failure == Never {
         let publisherExpectation = expectation(description: "Wait for publisher in file \(#file).")
         var result: T.Output?
         let token = publisher
@@ -33,7 +38,7 @@ extension XCTestCase {
         change()
         wait(for: [publisherExpectation], timeout: 1)
         token.cancel()
-        let unwrappedResult = try XCTUnwrap(result, "Publisher did not publish any value.")
+        let unwrappedResult = try XCTUnwrap(result, "The Publisher shall publish a value when the change occurs.", file: file, line: line)
 
         return unwrappedResult
     }
