@@ -23,6 +23,6 @@ class ToDoItemStoreTests: XCTestCase {
         sut.add(toDoItem)
         wait(for: [publisherExpectation], timeout: 1)
         token.cancel()
-        XCTAssertEqual(receivedItems.first?.title, toDoItem.title, "The ToDoItemStore shall publish items when when an item has been added to it.")
+        XCTAssertEqual(receivedItems, [toDoItem], "The ToDoItemStore shall publish items when when an item has been added to it.")
     }
 }
