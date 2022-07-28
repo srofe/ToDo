@@ -40,7 +40,6 @@ class ToDoItemStoreTests: XCTestCase {
     }
 
     func test_init_shouldLoadPreviousToDoItems() throws {
-        try XCTSkipIf(true, "Just test Coordinate change")
         var sut1: ToDoItemStore? = ToDoItemStore(fileName: "dummy_store")
         let publisherExpectation = expectation(description: "wait for publisher in \(#file)")
         let toDoItem = ToDoItem(title: "Dummy Title")
