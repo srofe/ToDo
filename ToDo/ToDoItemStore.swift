@@ -36,24 +36,22 @@ class ToDoItemStore {
     }
 
     private func saveItems() {
-        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(fileName) {
-            do {
-                let data = try JSONEncoder().encode(items)
-                try data.write(to: url)
-            } catch {
-                print("error: \(error)")
-            }
+        let url = FileManager.default.documentsURL(name: fileName)
+        do {
+            let data = try JSONEncoder().encode(items)
+            try data.write(to: url)
+        } catch {
+            print("error: \(error)")
         }
     }
 
     private func loadItems() {
-        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(fileName) {
-            do {
-                let data = try Data(contentsOf: url)
-                items = try JSONDecoder().decode([ToDoItem].self, from: data)
-            } catch {
-                print("error: \(error)")
-            }
+        let url = FileManager.default.documentsURL(name: fileName)
+        do {
+            let data = try Data(contentsOf: url)
+            items = try JSONDecoder().decode([ToDoItem].self, from: data)
+        } catch {
+            print("error: \(error)")
         }
     }
 }
