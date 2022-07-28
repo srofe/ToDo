@@ -15,6 +15,11 @@ class ToDoItemStore {
             itemPublisher.send(items)
         }
     }
+    private let fileName: String
+
+    init(fileName: String = "todoitems") {
+        self.fileName = fileName
+    }
 
     func add(_ item: ToDoItem) {
         items.append(item)
