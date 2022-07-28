@@ -43,11 +43,10 @@ class ToDoItemStoreTests: XCTestCase {
     }
 
     func test_init_shouldLoadPreviousToDoItems() throws {
-        var sut1: ToDoItemStore? = ToDoItemStore(fileName: dummyStoreName)
         let publisherExpectation = expectation(description: "wait for publisher in \(#file)")
         let toDoItem = ToDoItem(title: "Dummy Title")
-        sut1?.add(toDoItem)
-        sut1 = nil
+        sut?.add(toDoItem)
+        sut = nil
         let sut2 = ToDoItemStore(fileName: dummyStoreName)
         var result: [ToDoItem]?
         let token = sut2.itemPublisher
