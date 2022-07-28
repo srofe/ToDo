@@ -58,6 +58,24 @@ class ToDoItemStoreTests: XCTestCase {
         token.cancel()
         XCTAssertEqual(result, [toDoItem], "The ToDoItemStore shall enable the store to be saved and re-read from a storage medium.")
     }
+
+    func test_check_whenItemIsChecked_shouldLoadPreviousToDoItems() throws {
+        let publisherExpectation = expectation(description: "wait for publisher in \(#file)")
+        let toDoItem = ToDoItem(title: "Dummy Title")
+        sut.add(toDoItem)
+        sut.check(toDoItem)
+        sut = nil
+        let sut2 = ToDoItemStore(fileName: dummyStoreName)
+        var result: [ToDoItem]?
+        let token = sut2.itemPublisher
+            .sink { value in
+                result = value
+                publisherExpectation.fulfill()
+            }
+        wait(for: [publisherExpectation], timeout: 1)
+        token.cancel()
+        XCTAssertEqual(result?.first?.done, true, "The ToDoItemStore shall save the items when an item is checked.")
+    }
 }
 
 extension XCTestCase {
