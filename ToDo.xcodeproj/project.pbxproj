@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F40FE082289271D100DB9506 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FE081289271D100DB9506 /* Coordinate.swift */; };
+		F4536AD328972236002769AC /* ToDoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4536AD228972236002769AC /* ToDoItemCell.swift */; };
 		F49D24052890D572008EEBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24042890D572008EEBB2 /* AppDelegate.swift */; };
 		F49D24072890D572008EEBB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24062890D572008EEBB2 /* SceneDelegate.swift */; };
 		F49D24092890D572008EEBB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24082890D572008EEBB2 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		F40FE081289271D100DB9506 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		F4536AD228972236002769AC /* ToDoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemCell.swift; sourceTree = "<group>"; };
 		F49D24012890D572008EEBB2 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49D24042890D572008EEBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F49D24062890D572008EEBB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				F49D240D2890D575008EEBB2 /* Assets.xcassets */,
 				F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */,
 				F49D24122890D575008EEBB2 /* Info.plist */,
+				F4536AD228972236002769AC /* ToDoItemCell.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				F49D2437289104E3008EEBB2 /* Location.swift in Sources */,
 				F49D24352890DA18008EEBB2 /* ToDoItem.swift in Sources */,
 				F4AF1983289339E30024C3D1 /* FileManagerExtension.swift in Sources */,
+				F4536AD328972236002769AC /* ToDoItemCell.swift in Sources */,
 				F4AF1987289340340024C3D1 /* ToDoItemsListViewController.swift in Sources */,
 				F4AF1981289219D50024C3D1 /* ToDoItemStore.swift in Sources */,
 				F49D24072890D572008EEBB2 /* SceneDelegate.swift in Sources */,

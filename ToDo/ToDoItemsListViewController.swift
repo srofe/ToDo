@@ -30,6 +30,8 @@ extension ToDoItemsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = ToDoItemCell()
+        cell.titleLabel.text = "dummy 1"
+        return cell
     }
 }

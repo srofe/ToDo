@@ -48,4 +48,14 @@ class ToDoItemsListViewControllerTests: XCTestCase {
         let result = sut.tableView.numberOfRows(inSection: 0)
         XCTAssertEqual(result, 2, "The table view shall contain two items when two items added to the store.")
     }
+
+    func test_cellForRowAt_shouldReturnCellWithTitle() throws {
+        let titleUnderTest = "dummy 1"
+        toDoItemStoreMock.itemPublisher
+            .send([ToDoItem(title: titleUnderTest)])
+        let tableView = try XCTUnwrap(sut.tableView, "The view controller shall have a table view.")
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = try XCTUnwrap(tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) as? ToDoItemCell, "The table view shall return a cell at the index path \(indexPath).")
+        XCTAssertEqual(cell.titleLabel.text, titleUnderTest, "The table view shall contain a cell with the title of the items passed to the data source.")
+    }
 }
