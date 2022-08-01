@@ -83,4 +83,16 @@ class ToDoItemsListViewControllerTests: XCTestCase {
         let cell = try XCTUnwrap(tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) as? ToDoItemCell, "The table view shall return a cell at the index path \(indexPath).")
         XCTAssertEqual(cell.dateLabel.text, sut.dateFormatter.string(from: date))
     }
+
+    func test_numberOfSections_shouldReturnTwo() {
+        var doneItem = ToDoItem(title: "dummy 2")
+        doneItem.done = true
+        toDoItemStoreMock.itemPublisher
+            .send([
+                ToDoItem(title: "dummy 1"),
+                doneItem
+            ])
+        let result = sut.tableView.numberOfSections
+        XCTAssertEqual(result, 2, "The table view shall have two sections - one for todo items and one for done items.")
+    }
 }
