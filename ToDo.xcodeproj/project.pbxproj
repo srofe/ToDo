@@ -21,6 +21,7 @@
 		F49D24352890DA18008EEBB2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24342890DA18008EEBB2 /* ToDoItem.swift */; };
 		F49D2437289104E3008EEBB2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D2436289104E3008EEBB2 /* Location.swift */; };
 		F49D2439289106DF008EEBB2 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D2438289106DF008EEBB2 /* LocationTests.swift */; };
+		F4A6408F2897551300A2458B /* ToDoItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */; };
 		F4AF197F2892198D0024C3D1 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF197E2892198D0024C3D1 /* ToDoItemStoreTests.swift */; };
 		F4AF1981289219D50024C3D1 /* ToDoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1980289219D50024C3D1 /* ToDoItemStore.swift */; };
 		F4AF1983289339E30024C3D1 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1982289339E30024C3D1 /* FileManagerExtension.swift */; };
@@ -65,6 +66,7 @@
 		F49D24342890DA18008EEBB2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		F49D2436289104E3008EEBB2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F49D2438289106DF008EEBB2 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemCellTests.swift; sourceTree = "<group>"; };
 		F4AF197E2892198D0024C3D1 /* ToDoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreTests.swift; sourceTree = "<group>"; };
 		F4AF1980289219D50024C3D1 /* ToDoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStore.swift; sourceTree = "<group>"; };
 		F4AF1982289339E30024C3D1 /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
@@ -130,11 +132,11 @@
 				F40FE081289271D100DB9506 /* Coordinate.swift */,
 				F4AF1982289339E30024C3D1 /* FileManagerExtension.swift */,
 				F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */,
+				F4536AD228972236002769AC /* ToDoItemCell.swift */,
 				F49D240A2890D572008EEBB2 /* Main.storyboard */,
 				F49D240D2890D575008EEBB2 /* Assets.xcassets */,
 				F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */,
 				F49D24122890D575008EEBB2 /* Info.plist */,
-				F4536AD228972236002769AC /* ToDoItemCell.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -147,6 +149,7 @@
 				F4AF197E2892198D0024C3D1 /* ToDoItemStoreTests.swift */,
 				F4AF198428933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift */,
 				F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */,
+				F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A6408F2897551300A2458B /* ToDoItemCellTests.swift in Sources */,
 				F4AF197F2892198D0024C3D1 /* ToDoItemStoreTests.swift in Sources */,
 				F49D2439289106DF008EEBB2 /* LocationTests.swift in Sources */,
 				F49D241C2890D576008EEBB2 /* ToDoItemTests.swift in Sources */,
