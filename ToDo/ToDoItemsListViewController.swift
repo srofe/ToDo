@@ -37,6 +37,9 @@ class ToDoItemsListViewController: UIViewController {
                     let date = Date(timeIntervalSince1970: timestamp)
                     cell.dateLabel.text = self?.dateFormatter.string(from: date)
                 }
+                if let location = item.location {
+                    cell.locationLabel.text = location.name
+                }
                 return cell
             })
         token = toDoItemStore?.itemPublisher
