@@ -27,3 +27,9 @@ struct ToDoItem: Equatable, Codable {
         lhs.id == rhs.id
     }
 }
+
+extension ToDoItem: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
