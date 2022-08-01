@@ -25,4 +25,9 @@ class ToDoItemCellTests: XCTestCase {
         let subView = sut.titleLabel
         XCTAssertTrue(subView.isDescendant(of: sut.contentView), "The ToDoItemCell shall have a title label view as a subview of its content.")
     }
+
+    func test_hasDateLabelSubview() {
+        let subView = sut.dateLabel
+        XCTAssertTrue(subView.isDescendant(of: sut.contentView), "The ToDoItemCell shall have a date label view as a subview of its content.")
+    }
 }
