@@ -8,9 +8,10 @@
 import UIKit
 
 class ToDoItemCell: UITableViewCell {
-    let titleLabel = UILabel()
+    let titleLabel: UILabel
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        titleLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(titleLabel)
     }
