@@ -95,4 +95,16 @@ class ToDoItemsListViewControllerTests: XCTestCase {
         let result = sut.tableView.numberOfSections
         XCTAssertEqual(result, 2, "The table view shall have two sections - one for todo items and one for done items.")
     }
+
+    func test_didSelectCellAt_shouldCallDelegate() throws {
+        let delegateMock = ToDoItemsListViewControllerDelegationMock()
+        sut.delegate = delegateMock
+        let toDoItem = ToDoItem(title: "dummy 1")
+        toDoItemStoreMock.itemPublisher
+            .send([toDoItem])
+        let tableView = try XCTUnwrap(sut.tableView, "The view controller shall have a table view.")
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
+        XCTAssertEqual(delegateMock.selectToDoItemReceivedArguments?.item, toDoItem)
+    }
 }

@@ -8,6 +8,10 @@
 import UIKit
 import Combine
 
+protocol ToDoItemsListViewControllerDelegation {
+    func selectToDoItem(_ viewController: UIViewController, item: ToDoItem)
+}
+
 enum Section {
     case todo
     case done
@@ -20,6 +24,7 @@ class ToDoItemsListViewController: UIViewController {
     private var token: AnyCancellable?
     let dateFormatter = DateFormatter()
     private var dataSource: UITableViewDiffableDataSource<Section,ToDoItem>?
+    var delegate: ToDoItemsListViewControllerDelegation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +45,7 @@ class ToDoItemsListViewController: UIViewController {
                 self?.update(with: items)
             }
         tableView.register(ToDoItemCell.self, forCellReuseIdentifier: "ToDoItemCell")
+        tableView.delegate = self
     }
 
     private func update(with items: [ToDoItem]) {
@@ -48,5 +54,12 @@ class ToDoItemsListViewController: UIViewController {
         snapshot.appendItems(items.filter { false == $0.done }, toSection: .todo)
         snapshot.appendItems(items.filter { $0.done }, toSection: .done)
         dataSource?.apply(snapshot)
+    }
+}
+
+extension ToDoItemsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        delegate?.selectToDoItem(self, item: item)
     }
 }

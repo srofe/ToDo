@@ -28,6 +28,7 @@
 		F4AF198528933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF198428933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift */; };
 		F4AF1987289340340024C3D1 /* ToDoItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */; };
 		F4AF198928938E590024C3D1 /* ToDoItemStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */; };
+		F4DE3637289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F4AF198428933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewControllerTests.swift; sourceTree = "<group>"; };
 		F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewController.swift; sourceTree = "<group>"; };
 		F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreMock.swift; sourceTree = "<group>"; };
+		F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewControllerDelegationMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				F4AF198428933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift */,
 				F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */,
 				F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */,
+				F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				F49D2439289106DF008EEBB2 /* LocationTests.swift in Sources */,
 				F49D241C2890D576008EEBB2 /* ToDoItemTests.swift in Sources */,
 				F4AF198528933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift in Sources */,
+				F4DE3637289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift in Sources */,
 				F4AF198928938E590024C3D1 /* ToDoItemStoreMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
