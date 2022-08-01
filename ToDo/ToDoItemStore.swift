@@ -8,7 +8,13 @@
 import Foundation
 import Combine
 
-class ToDoItemStore {
+protocol ToDoItemStorable {
+    var itemPublisher: CurrentValueSubject<[ToDoItem],Never> { get set }
+
+    func check(_: ToDoItem)
+}
+
+class ToDoItemStore: ToDoItemStorable {
     var itemPublisher = CurrentValueSubject<[ToDoItem],Never>([])
     private var items: [ToDoItem] = [] {
         didSet {
