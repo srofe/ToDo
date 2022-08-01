@@ -21,6 +21,7 @@ class ToDoItemsListViewController: UIViewController {
             .sink { [weak self] items in
                 self?.items = items
             }
+        tableView.register(ToDoItemCell.self, forCellReuseIdentifier: "ToDoItemCell")
     }
 }
 
@@ -30,7 +31,7 @@ extension ToDoItemsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ToDoItemCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath) as! ToDoItemCell
         let item = items[indexPath.row]
         cell.titleLabel.text = item.title
         return cell
