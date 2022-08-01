@@ -71,4 +71,16 @@ class ToDoItemsListViewControllerTests: XCTestCase {
         let cell = try XCTUnwrap(tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) as? ToDoItemCell, "The table view shall return a cell at the index path \(indexPath).")
         XCTAssertEqual(cell.titleLabel.text, titleUnderTest, "The table view shall contain a cell with the title of the item passed to the data source - second item.")
     }
+
+    func test_cellForRowAt_shouldReturnCellWithDate() throws {
+        let date = Date()
+        toDoItemStoreMock.itemPublisher
+            .send([
+                ToDoItem(title: "dummy 1", timestamp: date.timeIntervalSince1970)
+            ])
+        let tableView = try XCTUnwrap(sut.tableView, "The view controller shall have a table view.")
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = try XCTUnwrap(tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) as? ToDoItemCell, "The table view shall return a cell at the index path \(indexPath).")
+        XCTAssertEqual(cell.dateLabel.text, sut.dateFormatter.string(from: date))
+    }
 }
