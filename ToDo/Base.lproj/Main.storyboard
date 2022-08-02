@@ -41,48 +41,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-Rd-Djv">
-                                <rect key="frame" x="186" y="136" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjN-1W-54m">
-                                <rect key="frame" x="186" y="165" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-Xh-Onl">
-                                <rect key="frame" x="186" y="194" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJF-oV-tg4">
-                                <rect key="frame" x="186" y="223" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lGs-oV-ZTO">
+                                <rect key="frame" x="20" y="44" width="374" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lGs-oV-ZTO" secondAttribute="height" multiplier="16:9" id="CbO-o7-Amn"/>
+                                </constraints>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="db1-4h-7wB">
+                                <rect key="frame" x="16" y="294.5" width="382" height="141.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-Rd-Djv">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjN-1W-54m">
+                                        <rect key="frame" x="0.0" y="45" width="382" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-Xh-Onl">
+                                        <rect key="frame" x="0.0" y="83" width="382" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJF-oV-tg4">
+                                        <rect key="frame" x="0.0" y="121" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1nD-Wz-30k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="vdN-Rd-Djv" secondAttribute="trailing" constant="16" id="3Qx-gX-dgg"/>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="NJF-oV-tg4" secondAttribute="trailing" constant="16" id="5BM-yJ-yWQ"/>
+                            <constraint firstItem="Oaj-Xh-Onl" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="16" id="DwI-ij-EmC"/>
+                            <constraint firstItem="NJF-oV-tg4" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="16" id="KRW-qR-AJs"/>
+                            <constraint firstItem="db1-4h-7wB" firstAttribute="top" secondItem="lGs-oV-ZTO" secondAttribute="bottom" constant="40" id="LC9-GW-7cZ"/>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="lGs-oV-ZTO" secondAttribute="trailing" constant="20" id="MJk-n2-GGP"/>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="Oaj-Xh-Onl" secondAttribute="trailing" constant="16" id="QdC-sY-24b"/>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="DjN-1W-54m" secondAttribute="trailing" constant="16" id="Uvp-W8-e1W"/>
+                            <constraint firstItem="lGs-oV-ZTO" firstAttribute="top" secondItem="1nD-Wz-30k" secondAttribute="top" id="hdU-bg-Ndi"/>
+                            <constraint firstItem="vdN-Rd-Djv" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="16" id="lFh-2S-PFc"/>
+                            <constraint firstItem="lGs-oV-ZTO" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="20" id="lNq-A1-kER"/>
+                            <constraint firstItem="DjN-1W-54m" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="16" id="zdQ-75-hWF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="DjN-1W-54m" id="xRu-Js-q5G"/>
                         <outlet property="descriptionLabel" destination="NJF-oV-tg4" id="zI0-3N-Mec"/>
                         <outlet property="locationLabel" destination="Oaj-Xh-Onl" id="aMA-lE-Oh2"/>
+                        <outlet property="mapView" destination="lGs-oV-ZTO" id="hvy-uF-n1P"/>
                         <outlet property="titleLabel" destination="vdN-Rd-Djv" id="bCr-LB-F0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfd-Hd-hpe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="138"/>
+            <point key="canvasLocation" x="1015.9420289855074" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
