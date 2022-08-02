@@ -29,6 +29,8 @@
 		F4AF1987289340340024C3D1 /* ToDoItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */; };
 		F4AF198928938E590024C3D1 /* ToDoItemStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */; };
 		F4DE3637289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */; };
+		F4DE363B2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */; };
+		F4DE363D2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewController.swift; sourceTree = "<group>"; };
 		F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreMock.swift; sourceTree = "<group>"; };
 		F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewControllerDelegationMock.swift; sourceTree = "<group>"; };
+		F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 				F4AF1982289339E30024C3D1 /* FileManagerExtension.swift */,
 				F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */,
 				F4536AD228972236002769AC /* ToDoItemCell.swift */,
+				F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */,
 				F49D240A2890D572008EEBB2 /* Main.storyboard */,
 				F49D240D2890D575008EEBB2 /* Assets.xcassets */,
 				F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 				F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */,
 				F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */,
 				F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */,
+				F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 				F40FE082289271D100DB9506 /* Coordinate.swift in Sources */,
 				F49D24092890D572008EEBB2 /* ViewController.swift in Sources */,
 				F49D24052890D572008EEBB2 /* AppDelegate.swift in Sources */,
+				F4DE363D2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift in Sources */,
 				F49D2437289104E3008EEBB2 /* Location.swift in Sources */,
 				F49D24352890DA18008EEBB2 /* ToDoItem.swift in Sources */,
 				F4AF1983289339E30024C3D1 /* FileManagerExtension.swift in Sources */,
@@ -314,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DE363B2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift in Sources */,
 				F4A6408F2897551300A2458B /* ToDoItemCellTests.swift in Sources */,
 				F4AF197F2892198D0024C3D1 /* ToDoItemStoreTests.swift in Sources */,
 				F49D2439289106DF008EEBB2 /* LocationTests.swift in Sources */,
