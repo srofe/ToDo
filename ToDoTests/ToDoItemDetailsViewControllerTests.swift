@@ -27,4 +27,9 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         let subview = try XCTUnwrap(sut.titleLabel, "The view controller shall have a title label.")
         XCTAssertTrue(subview.isDescendant(of: sut.view), "The title label view shall be a subview of the view controllers main view.")
     }
+
+    func test_view_shouldHaveDateLabel() throws {
+        let subview = try XCTUnwrap(sut.dateLabel, "The view controller shall have a date label.")
+        XCTAssertTrue(subview.isDescendant(of: sut.view), "The date label view shall be a subview of the view controllers main view.")
+    }
 }

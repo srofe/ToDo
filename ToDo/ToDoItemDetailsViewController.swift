@@ -9,4 +9,5 @@ import UIKit
 
 class ToDoItemDetailsViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
 }
