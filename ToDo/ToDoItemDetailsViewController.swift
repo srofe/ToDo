@@ -31,7 +31,7 @@ class ToDoItemDetailsViewController: UIViewController {
             if let coordinate = toDoItem?.location?.coordinate {
                 mapView.setCenter(CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), animated: false)
             }
-            doneButton.isEnabled = false
+            doneButton.isEnabled = (toDoItem?.done == false)
         }
     }
 }
