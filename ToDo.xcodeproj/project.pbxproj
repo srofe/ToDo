@@ -32,6 +32,9 @@
 		F4DE363B2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */; };
 		F4DE363D2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */; };
 		F4EE2B05289BBBBE00F5FBFF /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = F4EE2B04289BBBBE00F5FBFF /* ViewInspector */; };
+		F4EE2B07289BBC1000F5FBFF /* ToDoItemInputViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE2B06289BBC1000F5FBFF /* ToDoItemInputViewTests.swift */; };
+		F4EE2B09289BBC7D00F5FBFF /* ToDoItemInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE2B08289BBC7D00F5FBFF /* ToDoItemInputView.swift */; };
+		F4EE2B0B289BBCF800F5FBFF /* ToDoItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE2B0A289BBCF800F5FBFF /* ToDoItemData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewControllerDelegationMock.swift; sourceTree = "<group>"; };
 		F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemDetailsViewController.swift; sourceTree = "<group>"; };
+		F4EE2B06289BBC1000F5FBFF /* ToDoItemInputViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemInputViewTests.swift; sourceTree = "<group>"; };
+		F4EE2B08289BBC7D00F5FBFF /* ToDoItemInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemInputView.swift; sourceTree = "<group>"; };
+		F4EE2B0A289BBCF800F5FBFF /* ToDoItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,8 @@
 				F49D240D2890D575008EEBB2 /* Assets.xcassets */,
 				F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */,
 				F49D24122890D575008EEBB2 /* Info.plist */,
+				F4EE2B08289BBC7D00F5FBFF /* ToDoItemInputView.swift */,
+				F4EE2B0A289BBCF800F5FBFF /* ToDoItemData.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */,
 				F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */,
 				F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */,
+				F4EE2B06289BBC1000F5FBFF /* ToDoItemInputViewTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 			files = (
 				F40FE082289271D100DB9506 /* Coordinate.swift in Sources */,
 				F49D24092890D572008EEBB2 /* ViewController.swift in Sources */,
+				F4EE2B09289BBC7D00F5FBFF /* ToDoItemInputView.swift in Sources */,
 				F49D24052890D572008EEBB2 /* AppDelegate.swift in Sources */,
 				F4DE363D2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift in Sources */,
 				F49D2437289104E3008EEBB2 /* Location.swift in Sources */,
@@ -320,6 +330,7 @@
 				F4AF1983289339E30024C3D1 /* FileManagerExtension.swift in Sources */,
 				F4536AD328972236002769AC /* ToDoItemCell.swift in Sources */,
 				F4AF1987289340340024C3D1 /* ToDoItemsListViewController.swift in Sources */,
+				F4EE2B0B289BBCF800F5FBFF /* ToDoItemData.swift in Sources */,
 				F4AF1981289219D50024C3D1 /* ToDoItemStore.swift in Sources */,
 				F49D24072890D572008EEBB2 /* SceneDelegate.swift in Sources */,
 			);
@@ -329,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EE2B07289BBC1000F5FBFF /* ToDoItemInputViewTests.swift in Sources */,
 				F4DE363B2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift in Sources */,
 				F4A6408F2897551300A2458B /* ToDoItemCellTests.swift in Sources */,
 				F4AF197F2892198D0024C3D1 /* ToDoItemStoreTests.swift in Sources */,
