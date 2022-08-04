@@ -22,6 +22,9 @@ class ToDoItemDetailsViewController: UIViewController {
             if let timestamp = toDoItem?.timestamp {
                 dateLabel.text = dateFormatter.string(from: Date(timeIntervalSince1970: timestamp))
             }
+            if let description = toDoItem?.itemDescription {
+                descriptionLabel.text = description
+            }
         }
     }
 }
