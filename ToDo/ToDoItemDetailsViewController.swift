@@ -15,9 +15,13 @@ class ToDoItemDetailsViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var doneButton: UIButton!
+    let dateFormatter = DateFormatter()
     var toDoItem: ToDoItem? {
         didSet {
             titleLabel.text = toDoItem?.title
+            if let timestamp = toDoItem?.timestamp {
+                dateLabel.text = dateFormatter.string(from: Date(timeIntervalSince1970: timestamp))
+            }
         }
     }
 }

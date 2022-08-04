@@ -59,4 +59,11 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         sut.toDoItem = toDoItem
         XCTAssertEqual(sut.titleLabel.text, toDoItem.title, "When the item is assigned to the view controller the title label shall contain the item title.")
     }
+
+    func test_settingToDoItem_shouldUpdateDateLabel() {
+        let date = Date()
+        let toDoItem = ToDoItem(title: "Dummy title", timestamp: date.timeIntervalSince1970)
+        sut.toDoItem = toDoItem
+        XCTAssertEqual(sut.dateLabel.text, sut.dateFormatter.string(from: date))
+    }
 }
