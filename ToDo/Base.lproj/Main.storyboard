@@ -76,6 +76,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZy-f5-eEk">
+                                <rect key="frame" x="20" y="831" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1nD-Wz-30k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,15 +93,19 @@
                             <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="lGs-oV-ZTO" secondAttribute="trailing" constant="20" id="MJk-n2-GGP"/>
                             <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="Oaj-Xh-Onl" secondAttribute="trailing" constant="16" id="QdC-sY-24b"/>
                             <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="DjN-1W-54m" secondAttribute="trailing" constant="16" id="Uvp-W8-e1W"/>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="bottom" secondItem="GZy-f5-eEk" secondAttribute="bottom" id="Wxd-Tc-T1f"/>
                             <constraint firstItem="lGs-oV-ZTO" firstAttribute="top" secondItem="1nD-Wz-30k" secondAttribute="top" id="hdU-bg-Ndi"/>
                             <constraint firstItem="vdN-Rd-Djv" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="16" id="lFh-2S-PFc"/>
                             <constraint firstItem="lGs-oV-ZTO" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="20" id="lNq-A1-kER"/>
+                            <constraint firstItem="GZy-f5-eEk" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="20" id="sAK-dr-Pze"/>
+                            <constraint firstItem="1nD-Wz-30k" firstAttribute="trailing" secondItem="GZy-f5-eEk" secondAttribute="trailing" constant="20" id="tOr-GG-Gz4"/>
                             <constraint firstItem="DjN-1W-54m" firstAttribute="leading" secondItem="1nD-Wz-30k" secondAttribute="leading" constant="16" id="zdQ-75-hWF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="DjN-1W-54m" id="xRu-Js-q5G"/>
                         <outlet property="descriptionLabel" destination="NJF-oV-tg4" id="zI0-3N-Mec"/>
+                        <outlet property="doneButton" destination="GZy-f5-eEk" id="15h-zC-Is9"/>
                         <outlet property="locationLabel" destination="Oaj-Xh-Onl" id="aMA-lE-Oh2"/>
                         <outlet property="mapView" destination="lGs-oV-ZTO" id="hvy-uF-n1P"/>
                         <outlet property="titleLabel" destination="vdN-Rd-Djv" id="bCr-LB-F0c"/>

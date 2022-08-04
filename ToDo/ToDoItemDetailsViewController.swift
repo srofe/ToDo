@@ -14,4 +14,5 @@ class ToDoItemDetailsViewController: UIViewController {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var doneButton: UIButton!
 }

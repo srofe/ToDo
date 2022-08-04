@@ -47,4 +47,9 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         let subview = try XCTUnwrap(sut.mapView, "The view controller shall have a map view.")
         XCTAssertTrue(subview.isDescendant(of: sut.view), "The map view shall be a subview of the view controllers main view.")
     }
+
+    func test_view_shouldHaveDoneButton() throws {
+        let subview = try XCTUnwrap(sut.doneButton, "The view controller shall have a done button.")
+        XCTAssertTrue(subview.isDescendant(of: sut.view), "The doneButton shall be a subview of the view controllers main view.")
+    }
 }
