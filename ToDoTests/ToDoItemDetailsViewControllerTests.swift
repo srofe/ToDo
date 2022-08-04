@@ -94,6 +94,13 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         sut.toDoItem = toDoItem
         let center = sut.mapView.centerCoordinate
         XCTAssertEqual(center.latitude, latitude, accuracy: 0.000_01, "When the item is assigned to the view controller the location latitude shall be the location of the item.")
-        XCTAssertEqual(center.longitude, longitude, accuracy: 0.000_01, "When the item is assitned to the view controller the location longitude shall be the location of the item.")
+        XCTAssertEqual(center.longitude, longitude, accuracy: 0.000_01, "When the item is assigned to the view controller the location longitude shall be the location of the item.")
+    }
+
+    func test_settingToDoItem_shouldUpdateButtonState() {
+        var toDoItem = ToDoItem(title: "Dummy title")
+        toDoItem.done = true
+        sut.toDoItem = toDoItem
+        XCTAssertFalse(sut.doneButton.isEnabled, "When the items is assigned to the to the view and the item has been done, the done button shall be disabled.")
     }
 }
