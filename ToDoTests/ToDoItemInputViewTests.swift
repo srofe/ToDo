@@ -43,16 +43,13 @@ class ToDoItemInputViewTests: XCTestCase {
     }
 
     func test_whenWithDate_shouldAllowDateInput() throws {
-        let expectation = sut.on(\.didAppear) { view in
-            try view.find(ViewType.Toggle.self).tap()
-            let expected = Date(timeIntervalSince1970: 1_000_000)
-            try view
-                .find(ViewType.DatePicker.self)
-                .select(date: expected)
-            let input = self.toDoItemData.date
-            XCTAssertEqual(input, expected, "When the date picker is available the date shall be set to the item date.")
-        }
-        ViewHosting.host(view: sut)
-        wait(for: [expectation], timeout: 0.1)
+        let expected = Date()
+        try sut.inspect().find(ViewType.Toggle.self).tap()
+        try sut
+            .inspect()
+            .find(ViewType.DatePicker.self)
+            .select(date: expected)
+        let input = self.toDoItemData.date
+        XCTAssertEqual(input, expected, "When the date picker is available the date shall be set to the item date.")
     }
 }
