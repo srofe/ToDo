@@ -80,6 +80,9 @@
                                 <rect key="frame" x="20" y="831" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                <connections>
+                                    <action selector="checkItem:" destination="HrF-jn-R0u" eventType="touchUpInside" id="Ouv-cF-fg9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1nD-Wz-30k"/>

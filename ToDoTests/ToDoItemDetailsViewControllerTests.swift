@@ -109,4 +109,13 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         sut.toDoItem = toDoItem
         XCTAssertTrue(sut.doneButton.isEnabled, "When the item is assigned to the view and the item has not been done, the done button shall be enabled.")
     }
+
+    func test_sendingButtonAction_shouldCheckItem() {
+        let toDoItem = ToDoItem(title: "Dummy title")
+        sut.toDoItem = toDoItem
+        let storeMock = ToDoItemStoreMock()
+        sut.toDoItemStore = storeMock
+        sut.doneButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(storeMock.checkLastCallArgument, toDoItem)
+    }
 }

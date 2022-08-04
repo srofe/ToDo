@@ -16,6 +16,7 @@ class ToDoItemDetailsViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var doneButton: UIButton!
     let dateFormatter = DateFormatter()
+    var toDoItemStore: ToDoItemStorable?
     var toDoItem: ToDoItem? {
         didSet {
             titleLabel.text = toDoItem?.title
@@ -32,6 +33,12 @@ class ToDoItemDetailsViewController: UIViewController {
                 mapView.setCenter(CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), animated: false)
             }
             doneButton.isEnabled = (toDoItem?.done == false)
+        }
+    }
+
+    @IBAction func checkItem(_ sender: UIButton) {
+        if let toDoItem = toDoItem {
+            toDoItemStore?.check(toDoItem)
         }
     }
 }
