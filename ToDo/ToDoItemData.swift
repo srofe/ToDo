@@ -9,4 +9,5 @@ import Foundation
 
 class ToDoItemData: ObservableObject {
     @Published var title = ""
+    @Published var date = Date()
 }
