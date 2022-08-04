@@ -52,4 +52,11 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         let subview = try XCTUnwrap(sut.doneButton, "The view controller shall have a done button.")
         XCTAssertTrue(subview.isDescendant(of: sut.view), "The doneButton shall be a subview of the view controllers main view.")
     }
+
+    func test_settingToDoItem_shouldUpdateTitleLabel() {
+        let title = "Dummy title"
+        let toDoItem = ToDoItem(title: title)
+        sut.toDoItem = toDoItem
+        XCTAssertEqual(sut.titleLabel.text, toDoItem.title, "When the item is assigned to the view controller the title label shall contain the item title.")
+    }
 }
