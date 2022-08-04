@@ -25,6 +25,9 @@ class ToDoItemDetailsViewController: UIViewController {
             if let description = toDoItem?.itemDescription {
                 descriptionLabel.text = description
             }
+            if let location = toDoItem?.location {
+                locationLabel.text = location.name
+            }
         }
     }
 }

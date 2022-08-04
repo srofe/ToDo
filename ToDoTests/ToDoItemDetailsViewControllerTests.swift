@@ -73,4 +73,11 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         sut.toDoItem = toDoItem
         XCTAssertEqual(sut.descriptionLabel.text, description, "When the item is assigned to the view controller the description label shall contain the item description.")
     }
+
+    func test_settingToDoItem_shouldUpdateLocationLabel() {
+        let location = "dummy location"
+        let toDoItem = ToDoItem(title: "Dummy title", location: Location(name: location))
+        sut.toDoItem = toDoItem
+        XCTAssertEqual(sut.locationLabel.text, location, "When the item is assigned to the view controller the location label shall contain the item location text.")
+    }
 }
