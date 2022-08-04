@@ -28,6 +28,9 @@ class ToDoItemDetailsViewController: UIViewController {
             if let location = toDoItem?.location {
                 locationLabel.text = location.name
             }
+            if let coordinate = toDoItem?.location?.coordinate {
+                mapView.setCenter(CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), animated: false)
+            }
         }
     }
 }

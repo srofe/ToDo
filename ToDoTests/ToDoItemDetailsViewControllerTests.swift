@@ -80,4 +80,20 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
         sut.toDoItem = toDoItem
         XCTAssertEqual(sut.locationLabel.text, location, "When the item is assigned to the view controller the location label shall contain the item location text.")
     }
+
+    func test_settingToDoItem_shouldUpdateMapView() {
+        let latitude = 51.225556
+        let longitude = 6.782778
+        let toDoItem = ToDoItem(
+            title: "Dummy title",
+            location: Location(
+                name: "dummy location",
+                coordinate: Coordinate(latitude: latitude, longitude: longitude)
+                )
+        )
+        sut.toDoItem = toDoItem
+        let center = sut.mapView.centerCoordinate
+        XCTAssertEqual(center.latitude, latitude, accuracy: 0.000_01, "When the item is assigned to the view controller the location latitude shall be the location of the item.")
+        XCTAssertEqual(center.longitude, longitude, accuracy: 0.000_01, "When the item is assitned to the view controller the location longitude shall be the location of the item.")
+    }
 }
