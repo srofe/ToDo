@@ -74,4 +74,20 @@ class ToDoItemInputViewTests: XCTestCase {
         let input = toDoItemData.itemDescription
         XCTAssertEqual(input, expected, "The description text field shall contain the item description.")
     }
+
+    func test_shouldAllowLocationInput() throws {
+        let expected = "Dummy location"
+        try sut
+            .inspect()
+            .find(ViewType.TextField.self, where: { view in
+                let label = try view
+                    .labelView()
+                    .text()
+                    .string()
+                return label == "Location"
+            })
+            .setInput(expected)
+        let input = toDoItemData.locationName
+        XCTAssertEqual(input, expected, "The location text field shall contain the item location name.")
+    }
 }

@@ -18,6 +18,7 @@ struct ToDoItemInputView: View {
                 DatePicker("Date", selection: $data.date)
             }
             TextField("Description", text: $data.itemDescription)
+            TextField("Location", text: $data.locationName)
         }
     }
 }

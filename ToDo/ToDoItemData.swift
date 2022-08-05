@@ -12,4 +12,5 @@ class ToDoItemData: ObservableObject {
     @Published var date = Date()
     @Published var withDate = false
     @Published var itemDescription = ""
+    @Published var locationName = ""
 }
