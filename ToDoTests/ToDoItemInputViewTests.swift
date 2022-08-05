@@ -52,4 +52,20 @@ class ToDoItemInputViewTests: XCTestCase {
         let input = self.toDoItemData.date
         XCTAssertEqual(input, expected, "When the date picker is available the date shall be set to the item date.")
     }
+
+    func test_shouldAllowDescriptionInput() throws {
+        let expected = "Dummy description"
+        try sut
+            .inspect()
+            .find(ViewType.TextField.self, where: { view in
+                let label = try view
+                    .labelView()
+                    .text()
+                    .string()
+                return label == "Description"
+            })
+            .setInput(expected)
+        let input = toDoItemData.itemDescription
+        XCTAssertEqual(input, expected, "The description text field shall contain the item description.")
+    }
 }
