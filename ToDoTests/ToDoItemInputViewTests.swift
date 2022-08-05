@@ -29,7 +29,13 @@ class ToDoItemInputViewTests: XCTestCase {
         let expected = "Dummy title"
         try sut
             .inspect()
-            .find(ViewType.TextField.self)
+            .find(ViewType.TextField.self, where: { view in
+                let label = try view
+                    .labelView()
+                    .text()
+                    .string()
+                return label == "Title"
+            })
             .setInput(expected)
         let input = toDoItemData.title
         XCTAssertEqual(input, expected, "The title text field shall contain the item title.")
