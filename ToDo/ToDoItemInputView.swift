@@ -11,14 +11,18 @@ struct ToDoItemInputView: View {
     @ObservedObject var data: ToDoItemData
 
     var body: some View {
-        VStack {
-            TextField("Title", text: $data.title)
-            Toggle("Add Date", isOn: $data.withDate)
-            if data.withDate {
-                DatePicker("Date", selection: $data.date)
+        Form {
+            SwiftUI.Section {
+                TextField("Title", text: $data.title)
+                Toggle("Add Date", isOn: $data.withDate)
+                if data.withDate {
+                    DatePicker("Date", selection: $data.date)
+                }
+                TextField("Description", text: $data.itemDescription)
             }
-            TextField("Description", text: $data.itemDescription)
-            TextField("Location", text: $data.locationName)
+            SwiftUI.Section {
+                TextField("Location", text: $data.locationName)
+            }
         }
     }
 }
