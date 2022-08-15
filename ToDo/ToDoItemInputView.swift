@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ToDoItemInputView: View {
     @ObservedObject var data: ToDoItemData
+    let apiClient: APIClientProtocol
 
     var body: some View {
         Form {
@@ -33,11 +34,16 @@ struct ToDoItemInputView: View {
         }
     }
 
-    private func addToDoItem() {}
+    private func addToDoItem() {
+        apiClient.coordinate(
+            for: data.addressString,
+            completion: { coordinate in
+            })
+    }
 }
 
 struct ToDoItemInputView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoItemInputView(data: ToDoItemData())
+        ToDoItemInputView(data: ToDoItemData(), apiClient: APIClient())
     }
 }

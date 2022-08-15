@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F40FE082289271D100DB9506 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FE081289271D100DB9506 /* Coordinate.swift */; };
 		F4536AD328972236002769AC /* ToDoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4536AD228972236002769AC /* ToDoItemCell.swift */; };
+		F47AEA3928AA1FA9006D297B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47AEA3828AA1FA9006D297B /* APIClient.swift */; };
+		F47AEA3B28AA1FE6006D297B /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47AEA3A28AA1FE6006D297B /* APIClientMock.swift */; };
 		F49D24052890D572008EEBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24042890D572008EEBB2 /* AppDelegate.swift */; };
 		F49D24072890D572008EEBB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24062890D572008EEBB2 /* SceneDelegate.swift */; };
 		F49D24092890D572008EEBB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24082890D572008EEBB2 /* ViewController.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		F40FE081289271D100DB9506 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		F4536AD228972236002769AC /* ToDoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemCell.swift; sourceTree = "<group>"; };
+		F47AEA3828AA1FA9006D297B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F47AEA3A28AA1FE6006D297B /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		F49D24012890D572008EEBB2 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49D24042890D572008EEBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F49D24062890D572008EEBB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,12 +154,13 @@
 				F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */,
 				F4536AD228972236002769AC /* ToDoItemCell.swift */,
 				F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */,
+				F4EE2B08289BBC7D00F5FBFF /* ToDoItemInputView.swift */,
+				F4EE2B0A289BBCF800F5FBFF /* ToDoItemData.swift */,
+				F47AEA3828AA1FA9006D297B /* APIClient.swift */,
 				F49D240A2890D572008EEBB2 /* Main.storyboard */,
 				F49D240D2890D575008EEBB2 /* Assets.xcassets */,
 				F49D240F2890D575008EEBB2 /* LaunchScreen.storyboard */,
 				F49D24122890D575008EEBB2 /* Info.plist */,
-				F4EE2B08289BBC7D00F5FBFF /* ToDoItemInputView.swift */,
-				F4EE2B0A289BBCF800F5FBFF /* ToDoItemData.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */,
 				F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */,
 				F4EE2B06289BBC1000F5FBFF /* ToDoItemInputViewTests.swift */,
+				F47AEA3A28AA1FE6006D297B /* APIClientMock.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40FE082289271D100DB9506 /* Coordinate.swift in Sources */,
+				F47AEA3928AA1FA9006D297B /* APIClient.swift in Sources */,
 				F49D24092890D572008EEBB2 /* ViewController.swift in Sources */,
 				F4EE2B09289BBC7D00F5FBFF /* ToDoItemInputView.swift in Sources */,
 				F49D24052890D572008EEBB2 /* AppDelegate.swift in Sources */,
@@ -353,6 +360,7 @@
 				F4AF198528933FCA0024C3D1 /* ToDoItemsListViewControllerTests.swift in Sources */,
 				F4DE3637289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift in Sources */,
 				F4AF198928938E590024C3D1 /* ToDoItemStoreMock.swift in Sources */,
+				F47AEA3B28AA1FE6006D297B /* APIClientMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
