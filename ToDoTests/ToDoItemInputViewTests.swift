@@ -106,4 +106,17 @@ class ToDoItemInputViewTests: XCTestCase {
         let input = toDoItemData.addressString
         XCTAssertEqual(input, expected, "The address text field shall contain the item address text.")
     }
+
+    func test_shouldHaveASaveButton() throws {
+        XCTAssertNoThrow(try sut
+            .inspect()
+            .find(ViewType.Button.self, where: { view in
+                let label = try view
+                    .labelView()
+                    .text()
+                    .string()
+                return label == "Save"
+            })
+        )
+    }
 }

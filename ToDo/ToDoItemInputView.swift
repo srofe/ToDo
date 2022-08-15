@@ -24,8 +24,16 @@ struct ToDoItemInputView: View {
                 TextField("Location", text: $data.locationName)
                 TextField("Address", text: $data.addressString)
             }
+            SwiftUI.Section {
+                Button(action: addToDoItem,
+                       label: {
+                    Text("Save")
+                })
+            }
         }
     }
+
+    private func addToDoItem() {}
 }
 
 struct ToDoItemInputView_Previews: PreviewProvider {
