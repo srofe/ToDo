@@ -46,6 +46,8 @@ struct ToDoItemInputView: View {
                 completion: { coordinate in
                     self.delegate?.addToDoItem(with: data, coordinate: coordinate)
                 })
+        } else {
+            self.delegate?.addToDoItem(with: data, coordinate: nil)
         }
     }
 }
