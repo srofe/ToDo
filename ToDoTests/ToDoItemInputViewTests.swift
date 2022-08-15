@@ -90,4 +90,20 @@ class ToDoItemInputViewTests: XCTestCase {
         let input = toDoItemData.locationName
         XCTAssertEqual(input, expected, "The location text field shall contain the item location name.")
     }
+
+    func test_shouldAllowAddressInput() throws {
+        let expected = "Dummy address"
+        try sut
+            .inspect()
+            .find(ViewType.TextField.self, where: { view in
+                let label = try view
+                    .labelView()
+                    .text()
+                    .string()
+                return label == "Address"
+            })
+            .setInput(expected)
+        let input = toDoItemData.addressString
+        XCTAssertEqual(input, expected, "The address text field shall contain the item address text.")
+    }
 }
