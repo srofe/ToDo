@@ -127,13 +127,13 @@ class ToDoItemInputViewTests: XCTestCase {
         toDoItemData.title = "Dummy title"
         let expected = "Dummy address"
         toDoItemData.addressString = expected
-        try tapButton(named: "Save")
+        try sut.tapButton(named: "Save")
         XCTAssertEqual(apiClientMock.coordinateAddress, expected, "Tapping the Save button shall retrieve address specified by the coordinates.")
     }
 
     func test_save_whenAddressEmpty_shouldNotFetchCoordinate() throws {
         toDoItemData.title = "Dummy title"
-        try tapButton(named: "Save")
+        try sut.tapButton(named: "Save")
         XCTAssertNil(apiClientMock.coordinateAddress, "Tapping the save button when there are no coordinates shall not call the api client method.")
     }
 
@@ -143,7 +143,7 @@ class ToDoItemInputViewTests: XCTestCase {
         apiClientMock.coordinateReturnValue = Coordinate(latitude: 1, longitude: 2)
         let delegateMock = ToDoItemInputViewDelegateMock()
         sut.delegate = delegateMock
-        try tapButton(named: "Save")
+        try sut.tapButton(named: "Save")
         XCTAssertEqual(delegateMock.lastToDoItemData?.title, "Dummy title", "Tapping the save button shall call the view delegate method - item title.")
         XCTAssertEqual(delegateMock.lastCoordinate?.latitude, 1, "Tapping the save button shall call the view delegate method - item latitude retrieved.")
         XCTAssertEqual(delegateMock.lastCoordinate?.longitude, 2, "Tapping the save button shall call the view delegate method - item longitude retrieved.")
@@ -154,15 +154,14 @@ class ToDoItemInputViewTests: XCTestCase {
         apiClientMock.coordinateReturnValue = Coordinate(latitude: 1, longitude: 2)
         let delegateMock = ToDoItemInputViewDelegateMock()
         sut.delegate = delegateMock
-        try tapButton(named: "Save")
+        try sut.tapButton(named: "Save")
         XCTAssertEqual(delegateMock.lastToDoItemData?.title, "Dummy title")
     }
 }
 
-extension ToDoItemInputViewTests {
-    private func tapButton(named name: String) throws {
-        try sut
-            .inspect()
+extension ToDoItemInputView {
+    func tapButton(named name: String) throws {
+        try inspect()
             .find(ViewType.Button.self, where: { view in
                 let label = try view
                     .labelView()
