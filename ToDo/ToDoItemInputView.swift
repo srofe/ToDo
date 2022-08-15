@@ -35,10 +35,12 @@ struct ToDoItemInputView: View {
     }
 
     private func addToDoItem() {
-        apiClient.coordinate(
-            for: data.addressString,
-            completion: { coordinate in
-            })
+        if !data.addressString.isEmpty {
+            apiClient.coordinate(
+                for: data.addressString,
+                completion: { coordinate in
+                })
+        }
     }
 }
 
