@@ -105,7 +105,7 @@ class ToDoItemDetailsViewControllerTests: XCTestCase {
     }
 
     func test_settingToDoItem_shouldUpdateButtonStateIfItemNotDone() {
-        var toDoItem = ToDoItem(title: "Dummy title")
+        let toDoItem = ToDoItem(title: "Dummy title")
         sut.toDoItem = toDoItem
         XCTAssertTrue(sut.doneButton.isEnabled, "When the item is assigned to the view and the item has not been done, the done button shall be enabled.")
     }
