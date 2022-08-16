@@ -37,4 +37,13 @@ class APIClientTests: XCTestCase {
         XCTAssertEqual(result?.latitude, location.coordinate.latitude)
         XCTAssertEqual(result?.longitude, location.coordinate.longitude)
     }
+
+    func test_coordinate_shouldCallGeoCoderWithAddress() {
+        let geocoderMock = GeoCoderProtocolMock()
+        sut.geoCoder = geocoderMock
+        let expectedAddress = "Dummy address"
+        sut.coordinate(for: expectedAddress) { _ in
+        }
+        XCTAssertEqual(geocoderMock.gecodeAddressString, expectedAddress, "When setting the coordinate the API client shall pass the address to the GeoCoder.")
+    }
 }
