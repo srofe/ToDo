@@ -26,6 +26,7 @@
 		F49D24352890DA18008EEBB2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D24342890DA18008EEBB2 /* ToDoItem.swift */; };
 		F49D2437289104E3008EEBB2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D2436289104E3008EEBB2 /* Location.swift */; };
 		F49D2439289106DF008EEBB2 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D2438289106DF008EEBB2 /* LocationTests.swift */; };
+		F4A63CB628B77ED8000118A8 /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A63CB528B77ED8000118A8 /* URLSessionProtocolMock.swift */; };
 		F4A6408F2897551300A2458B /* ToDoItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */; };
 		F4AF197F2892198D0024C3D1 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF197E2892198D0024C3D1 /* ToDoItemStoreTests.swift */; };
 		F4AF1981289219D50024C3D1 /* ToDoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1980289219D50024C3D1 /* ToDoItemStore.swift */; };
@@ -84,6 +85,7 @@
 		F49D24342890DA18008EEBB2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		F49D2436289104E3008EEBB2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F49D2438289106DF008EEBB2 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		F4A63CB528B77ED8000118A8 /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
 		F4A6408E2897551300A2458B /* ToDoItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemCellTests.swift; sourceTree = "<group>"; };
 		F4AF197E2892198D0024C3D1 /* ToDoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreTests.swift; sourceTree = "<group>"; };
 		F4AF1980289219D50024C3D1 /* ToDoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStore.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */,
 				F47AEA3A28AA1FE6006D297B /* APIClientMock.swift */,
 				F408D39828AB5D4B00753A50 /* GeoCoderProtocolMock.swift */,
+				F4A63CB528B77ED8000118A8 /* URLSessionProtocolMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			files = (
 				F4EE2B07289BBC1000F5FBFF /* ToDoItemInputViewTests.swift in Sources */,
 				F4DE363B2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift in Sources */,
+				F4A63CB628B77ED8000118A8 /* URLSessionProtocolMock.swift in Sources */,
 				F4A6408F2897551300A2458B /* ToDoItemCellTests.swift in Sources */,
 				F408D39628AB5AF900753A50 /* APIClientTests.swift in Sources */,
 				F47AEA3D28AA2CF3006D297B /* ToDoItemInputViewDelegateMock.swift in Sources */,

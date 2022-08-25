@@ -45,4 +45,18 @@ class APIClientTests: XCTestCase {
         XCTAssertEqual(result?.latitude, location.coordinate.latitude, "When setting the address, and a valid coordinate is retreived from the GeoCoder, the API client shall pass the coordinate to the completion handler - latitude.")
         XCTAssertEqual(result?.longitude, location.coordinate.longitude, "When setting the address, and a valid coordinate is retreived from the GeoCoder, the API client shall pass the coordinate to the completion handler - longitude.")
     }
+
+    func test_toDoItems_shouldFetchItems() async throws {
+        let url = try XCTUnwrap(URL(string: "http://toodoo.app/items"))
+        let urlSessionMock = URLSessionProtocolMock()
+        let exptected = [ToDoItem(title: "Dummy title")]
+        urlSessionMock.dataForDelegateReturnValue = (
+            try JSONEncoder().encode(exptected),
+            HTTPURLResponse(url: url, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+        )
+        sut.session = urlSessionMock
+        let items = try await sut.toDoItems()
+        XCTAssertEqual(items, exptected, "The API client shall fetch the ToDo items.")
+        XCTAssertEqual(urlSessionMock.dataForDelegateRequest, URLRequest(url: url), "The API client shall use the appropriate URL for the server.")
+    }
 }
