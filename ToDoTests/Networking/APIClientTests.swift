@@ -42,8 +42,8 @@ class APIClientTests: XCTestCase {
         }
         geoCoderMock.completionHandler?([placemark], nil)
         XCTAssertEqual(geoCoderMock.gecodeAddressString, expectedAddress, "When setting the coordinate the API client shall pass the address to the GeoCoder.")
-        XCTAssertEqual(result?.latitude, location.coordinate.latitude, "When setting the address, and a valid coordinate is retreived from the GeoCoder, the API client shall pass the coordinate to the completion handler - latitude.")
-        XCTAssertEqual(result?.longitude, location.coordinate.longitude, "When setting the address, and a valid coordinate is retreived from the GeoCoder, the API client shall pass the coordinate to the completion handler - longitude.")
+        XCTAssertEqual(result?.latitude, location.coordinate.latitude, "When setting the address, and a valid coordinate is retrieved from the GeoCoder, the API client shall pass the coordinate to the completion handler - latitude.")
+        XCTAssertEqual(result?.longitude, location.coordinate.longitude, "When setting the address, and a valid coordinate is retrieved from the GeoCoder, the API client shall pass the coordinate to the completion handler - longitude.")
     }
 
     func test_toDoItems_shouldFetchItems() async throws {
@@ -58,5 +58,19 @@ class APIClientTests: XCTestCase {
         let items = try await sut.toDoItems()
         XCTAssertEqual(items, exptected, "The API client shall fetch the ToDo items.")
         XCTAssertEqual(urlSessionMock.dataForDelegateRequest, URLRequest(url: url), "The API client shall use the appropriate URL for the server.")
+    }
+
+    func test_toDoItems_whenError_shouldPassError() async throws {
+        let urlSessionMock = URLSessionProtocolMock()
+        let expected = NSError(domain: "", code: 1234)
+        urlSessionMock.dataForDelegateError = expected
+        sut.session = urlSessionMock
+        do {
+            _ = try await sut.toDoItems()
+            XCTFail("When there are errors fetching data, these should be detected.")
+        } catch {
+            let nsError = try XCTUnwrap(error as NSError)
+            XCTAssertEqual(nsError, expected, "When there are errors in fetching data, the API client shall pass errors to the caller.")
+        }
     }
 }
