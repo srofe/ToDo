@@ -73,4 +73,20 @@ class APIClientTests: XCTestCase {
             XCTAssertEqual(nsError, expected, "When there are errors in fetching data, the API client shall pass errors to the caller.")
         }
     }
+
+    func test_toDoItems_whenJSONIsWrong_shouldFetchItems() async throws {
+        let url = try XCTUnwrap(URL(string: "foo"))
+        let urlSessionMock = URLSessionProtocolMock()
+        urlSessionMock.dataForDelegateReturnValue = (
+            try JSONEncoder().encode("dummy"),
+            HTTPURLResponse(url: url, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+        )
+        sut.session = urlSessionMock
+        do {
+            _ = try await sut.toDoItems()
+            XCTFail("When there are errors fetching data, these should be detected.")
+        } catch {
+            XCTAssertTrue(error is Swift.DecodingError, "When there are errors with JSON data, the API client shall pass errors to the caller.")
+        }
+    }
 }
