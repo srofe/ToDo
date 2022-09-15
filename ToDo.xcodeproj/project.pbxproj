@@ -35,6 +35,7 @@
 		F4AF1987289340340024C3D1 /* ToDoItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */; };
 		F4AF198928938E590024C3D1 /* ToDoItemStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */; };
 		F4DA97A828D3D190001D01B0 /* AppSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA97A728D3D190001D01B0 /* AppSetupTests.swift */; };
+		F4DA97AA28D3D476001D01B0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA97A928D3D476001D01B0 /* AppCoordinator.swift */; };
 		F4DE3637289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */; };
 		F4DE363B2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */; };
 		F4DE363D2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */; };
@@ -95,6 +96,7 @@
 		F4AF1986289340340024C3D1 /* ToDoItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewController.swift; sourceTree = "<group>"; };
 		F4AF198828938E590024C3D1 /* ToDoItemStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreMock.swift; sourceTree = "<group>"; };
 		F4DA97A728D3D190001D01B0 /* AppSetupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupTests.swift; sourceTree = "<group>"; };
+		F4DA97A928D3D476001D01B0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F4DE3636289877CC00D15CE9 /* ToDoItemsListViewControllerDelegationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewControllerDelegationMock.swift; sourceTree = "<group>"; };
 		F4DE363A2898AE8900D15CE9 /* ToDoItemDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		F4DE363C2898AEDF00D15CE9 /* ToDoItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemDetailsViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				F49D24042890D572008EEBB2 /* AppDelegate.swift */,
 				F49D24062890D572008EEBB2 /* SceneDelegate.swift */,
 				F49D24082890D572008EEBB2 /* ViewController.swift */,
+				F4DA97A928D3D476001D01B0 /* AppCoordinator.swift */,
 				F408D38F28AB59B800753A50 /* Model */,
 				F408D39128AB59E600753A50 /* Views */,
 				F408D39028AB59C700753A50 /* Networking */,
@@ -413,6 +416,7 @@
 				F4536AD328972236002769AC /* ToDoItemCell.swift in Sources */,
 				F4AF1987289340340024C3D1 /* ToDoItemsListViewController.swift in Sources */,
 				F4EE2B0B289BBCF800F5FBFF /* ToDoItemData.swift in Sources */,
+				F4DA97AA28D3D476001D01B0 /* AppCoordinator.swift in Sources */,
 				F4AF1981289219D50024C3D1 /* ToDoItemStore.swift in Sources */,
 				F49D24072890D572008EEBB2 /* SceneDelegate.swift in Sources */,
 			);
