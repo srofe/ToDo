@@ -27,7 +27,13 @@ class AppCoordinatorTests: XCTestCase {
 
     func test_start_shouldSetDelegate() throws {
         sut.start()
-        let listViewController = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemsListViewController)
-        XCTAssertIdentical(listViewController.delegate as? AppCoordinator, sut)
+        let listViewController = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemsListViewController, "The ToDoItemsListViewController shall be a sub-view of the Navigation Controller.")
+        XCTAssertIdentical(listViewController.delegate as? AppCoordinator, sut, "The Application Coordinator shall be the delegate for the ToDoItemsListViewController.")
+    }
+
+    func test_start_shouldAssignItemStore() throws {
+        sut.start()
+        let listViewController = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemsListViewController, "The ToDoItemsListViewController shall be a sub-view of the Navigation Controller.")
+        XCTAssertNotNil(listViewController.toDoItemStore)
     }
 }
