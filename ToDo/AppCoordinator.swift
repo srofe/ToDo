@@ -26,5 +26,13 @@ class AppCoordinator: Coordinator {
     func start() {
         navigationController.pushViewController(viewController, animated: false)
         window?.rootViewController = navigationController
+        if let listViewController = viewController as? ToDoItemsListViewController {
+            listViewController.delegate = self
+        }
+    }
+}
+
+extension AppCoordinator: ToDoItemsListViewControllerDelegation {
+    func selectToDoItem(_ viewController: UIViewController, item: ToDoItem) {
     }
 }
