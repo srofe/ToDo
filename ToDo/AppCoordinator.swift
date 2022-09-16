@@ -37,5 +37,12 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator: ToDoItemsListViewControllerDelegation {
     func selectToDoItem(_ viewController: UIViewController, item: ToDoItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let next = storyboard.instantiateViewController(withIdentifier: "ToDoItemDetailsViewController") as? ToDoItemDetailsViewController else {
+            return
+        }
+        next.loadViewIfNeeded()
+        next.toDoItem = item
+        navigationController.pushViewController(next, animated: true)
     }
 }

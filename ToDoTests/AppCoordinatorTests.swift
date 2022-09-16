@@ -34,6 +34,14 @@ class AppCoordinatorTests: XCTestCase {
     func test_start_shouldAssignItemStore() throws {
         sut.start()
         let listViewController = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemsListViewController, "The ToDoItemsListViewController shall be a sub-view of the Navigation Controller.")
-        XCTAssertNotNil(listViewController.toDoItemStore)
+        XCTAssertNotNil(listViewController.toDoItemStore, "The Application Coordinator shall assign a ToDoItemStore.")
+    }
+
+    func test_selectToDoItem_pushDetails() throws {
+        let dummyViewController = UIViewController()
+        let item = ToDoItem(title: "dummy title")
+        sut.selectToDoItem(dummyViewController, item: item)
+        let detail = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemDetailsViewController, "The ToDoItemsListViewController shall be a sub-view of the Navigation Controller.")
+        XCTAssertEqual(detail.toDoItem, item, "When selecting an item in the list, the Application Coordinator shall pass the item to the Details View Controller.")
     }
 }
